@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<!-- Booking Section -->
+<section id="booking" class="booking-section">
+    <div class="section-header">
+        <h2>Select a Slot</h2>
+        <p>Real-time availability. Click to book.</p>
+    </div>
+
+    <div class="booking-interface glass-card">
+        <div class="booking-controls">
+            <div class="date-picker">
+                <button class="icon-btn" id="prev-date"><i data-lucide="chevron-left"></i></button>
+                <span id="current-date-display">Today, Oct 24</span>
+                <button class="icon-btn" id="next-date"><i data-lucide="chevron-right"></i></button>
+            </div>
+            <div class="filter-controls">
+                <select id="studio-filter" class="custom-select">
+                    <option value="all">All Spaces</option>
+                    <option value="studio-a">Studio A</option>
+                    <option value="radio-101">Radio Station 101</option>
+                </select>
+            </div>
+        </div>
+        {% for slot in slots %}
+    </h2> {{ slot["displayTime"] }} </h2> </br>
+        {% endfor %}
+        <div class="slots-grid" id="slots-container">
+            <!-- Slots will be injected here by JS -->
+             
+            <div class="slot-loading">
+                <div class="spinner"></div>
+                <p>Loading availability...</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

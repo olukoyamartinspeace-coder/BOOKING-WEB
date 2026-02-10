@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<!-- Services Section -->
+<section id="studios" class="services">
+    <div class="section-header">
+        <h2>Our Spaces</h2>
+        <p>Choose the perfect environment for your project.</p>
+    </div>
+    <div class="services-grid">
+        <div class="service-card glass-card">
+            <div class="service-image" style="background: linear-gradient(45deg, #FF0080, #7928CA);"></div>
+            <div class="service-info">
+                <h3>Recording Studio A</h3>
+                <p>Perfect for bands and full productions. Includes isolation booth and lounge.</p>
+                <ul class="features-list">
+                    <li><i data-lucide="check"></i> 48-Channel Console</li>
+                    <li><i data-lucide="check"></i> 5.1 Surround Sound</li>
+                </ul>
+                <button class="btn btn-primary btn-lg" onclick="window.location.href='/booking'">Recording studio
+                    A</button>
+            </div>
+        </div>
+        <div class="service-card glass-card">
+            <div class="service-image" style="background-image: url('radio\static\img\radio pic.jpeg');
+                     background-size: cover;
+                     background-position: center;"></div>
+            <div class="service-info">
+                <h3>Radio Station 101</h3>
+                <p>Broadcast-ready setup for podcasts, live shows, and interviews.</p>
+                <ul class="features-list">
+                    <li><i data-lucide="check"></i> 4 Mic Setup</li>
+                    <li><i data-lucide="check"></i> Live Streaming Capable</li>
+                </ul>
+                <button class="btn btn-primary btn-lg" onclick="window.location.href='/booking'">Radio Station
+                    101</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

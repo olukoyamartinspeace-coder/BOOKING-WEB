@@ -1,0 +1,133 @@
+/* Booking Details Specific Styles */
+
+.page-title-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.back-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.back-link:hover {
+    color: var(--text-primary);
+}
+
+.page-title-group h1 {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 2rem;
+}
+
+.page-title-group .badge {
+    align-self: flex-start;
+}
+
+/* Details Grid */
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 24px;
+    margin-bottom: 80px;
+    /* Space for fixed bottom bar if needed, or just regular margin */
+}
+
+.details-card {
+    padding: 32px;
+}
+
+.details-card.full-width {
+    grid-column: 1 / -1;
+}
+
+.card-header {
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+}
+
+.card-header h2 {
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-primary);
+}
+
+.card-header h2 i {
+    color: var(--accent-secondary);
+    width: 20px;
+}
+
+.info-group {
+    margin-bottom: 20px;
+}
+
+.info-group label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.info-group p {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+
+.info-row {
+    display: flex;
+    gap: 48px;
+}
+
+/* Bottom Action Bar */
+.action-bar-bottom {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--glass-border);
+    padding-top: 24px;
+}
+
+.btn.danger {
+    color: #ff3b30;
+    border-color: rgba(255, 59, 48, 0.3);
+}
+
+.btn.danger:hover {
+    background: rgba(255, 59, 48, 0.1);
+    border-color: #ff3b30;
+}
+
+/* Status Badges reused from bookings.css but ensure they work here */
+.status-confirmed {
+    background: rgba(0, 224, 84, 0.15);
+    color: #4cd964;
+    border: 1px solid rgba(0, 224, 84, 0.2);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-title-group h1 {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}

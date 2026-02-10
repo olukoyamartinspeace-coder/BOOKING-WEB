@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1 class="hero-title">Amplify Your Voice. <br> <span class="gradient-text">Book Your Session.</span></h1>
+        <p class="hero-subtitle">Professional Recording Studios & Radio Slots available at your fingertips. Real-time
+            availability, instant confirmation.</p>
+        <div class="hero-buttons">
+            <button class="btn btn-primary btn-lg" onclick="window.location.href='/studio'">View Available
+                Slots</button>
+            <button class="btn btn-outline btn-lg">Learn More</button>
+        </div>
+    </div>
+    <div class="hero-visual">
+        <!-- Abstract or Studio representation -->
+        <div class="visual-circle"></div>
+        <div class="visual-card glass-card">
+            <div class="card-icon"><i data-lucide="radio"></i></div>
+            <h3>Live Now</h3>
+            <p>Studio A is On Air</p>
+        </div>
+        <div class="visual-card glass-card start-card">
+            <div class="card-icon"><i data-lucide="music"></i></div>
+            <h3>Recording</h3>
+            <p>Studio B is Occupied</p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
